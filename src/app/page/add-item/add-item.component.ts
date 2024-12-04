@@ -6,25 +6,26 @@ import { RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-add-customer',
+  selector: 'app-add-item',
   standalone: true,
-  imports: [RouterLink,HttpClientModule,CommonModule, FormsModule],
-  templateUrl: './add-customer.component.html',
-  styleUrl: './add-customer.component.css'
+  imports: [FormsModule,RouterLink,HttpClientModule,CommonModule],
+  templateUrl: './add-item.component.html',
+  styleUrl: './add-item.component.css'
 })
-export class AddCustomerComponent {
+export class AddItemComponent {
   constructor(private http : HttpClient){
 
   }
 
-  public customerDetail: any = {
+  public itemDetail: any = {
     name: "",
-    city: "",
-    contact: ""
+    rentalPerDay: 0.0,
+    finePerDay: 0.0,
+    availability: "",
   }
 
-  addCustomer(){
-    this.http.post("http://localhost:8080/customer/add",this.customerDetail)
+  addItem(){
+    this.http.post("http://localhost:8080/item/add",this.itemDetail)
     .subscribe(data=>{
       Swal.fire({
         position: "top-end",
@@ -36,3 +37,6 @@ export class AddCustomerComponent {
     })
   }
 }
+
+
+

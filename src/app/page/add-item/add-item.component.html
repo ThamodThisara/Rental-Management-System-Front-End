@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header text-center bg-primary text-white">
+            <h4>Add Item</h4>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Item Name"
+                    [(ngModel)]="itemDetail.name">
+            </div>
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Rental Per Day</label>
+                <input type="text" class="form-control" id="name" 
+                    [(ngModel)]="itemDetail.rentalPerDay">
+            </div>
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Fine Per Day</label>
+                <input type="number" class="form-control" id="name" 
+                    [(ngModel)]="itemDetail.finePerDay">
+            </div>
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Availability</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Item Availability"
+                    [(ngModel)]="itemDetail.availability">
+            </div>
+        </div>
+
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary btn-lg" (click)="addItem()">Submit</button>
+        </div>
+    </div>
+</div>
+
+
