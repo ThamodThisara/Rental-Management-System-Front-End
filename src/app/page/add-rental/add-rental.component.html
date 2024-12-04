@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header text-center bg-primary text-white">
+            <h4>Add Rental</h4>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="date" class="form-label">Rental Date</label>
+                <input type="date" class="form-control" id="date" required [(ngModel)]="rentalDetail.rentalDate">
+            </div>
+
+            <div class="mb-3">
+                <label for="date" class="form-label">Return Date</label>
+                <input type="date" class="form-control" id="date" required [(ngModel)]="rentalDetail.returnDate">
+            </div>
+
+            <div class="mb-3">
+                <label for="date" class="form-label">Due Date</label>
+                <input type="date" class="form-control" id="date" required [(ngModel)]="rentalDetail.dueDate">
+            </div>
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Total Cost</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Total Cost"
+                    [(ngModel)]="rentalDetail.totalCost">
+            </div>
+        </div>
+
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary btn-lg" (click)="addRental()">Submit</button>
+        </div>
+    </div>
+</div>
